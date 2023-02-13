@@ -1,6 +1,13 @@
-﻿namespace eCommerce.Data.Enums
+﻿using System;
+
+namespace eTicket.Data.Enums
 {
-    public class MovieCategory
+    public enum MovieCategory
     {
+            Action = 1,
+            Comedy,
+            Drama,
+            Documentary
+
     }
 }
