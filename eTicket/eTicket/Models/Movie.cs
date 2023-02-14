@@ -3,6 +3,7 @@ using Microsoft.VisualBasic;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace eTicket.Models
 {
@@ -10,12 +11,12 @@ namespace eTicket.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Nmae { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
         public string ImageURL { get; set; }
-        public DateAndTime StartDate { get; set; }
-        public DateAndTime EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public MovieCategory MovieCategory { get; set; }
         public List<Actor_Movie> Actors_Movies { get; set; }
         public int CinemaId { get; set; }

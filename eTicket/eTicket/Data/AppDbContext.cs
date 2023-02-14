@@ -5,7 +5,7 @@ namespace eTicket.Data
 {
     public class AppDbContext :DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) :base(options)
         {
 
         }
@@ -17,8 +17,8 @@ namespace eTicket.Data
                 am.MovieId
 
             });
-            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(Actor_Movie => Actor_Movie.Actors_Movies).HasForeignKey(m => m.MovieId);
-            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(Actor_Movie => Actor_Movie.Actors_Movies).HasForeignKey(m => m.ActorId);
+            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(actor_Movie => actor_Movie.Actors_Movies).HasForeignKey(m => m.MovieId);
+            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(actor_Movie => actor_Movie.Actors_Movies).HasForeignKey(m => m.ActorId);
 
             base.OnModelCreating(modelBuilder);
         }
